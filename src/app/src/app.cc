@@ -23,8 +23,14 @@ void Servidor() {
   Socket servidor(AF_INET, SOCK_DGRAM, 0);
   SocketAddr addr;
   servidor.Bind({ "127.0.0.1", 3030, AF_INET });
-  servidor.Receive(buffer, addr);
-  std::cout << buffer << std::endl;
+  while (true) {
+    try {
+      servidor.Receive(buffer, addr);
+      std::cout << buffer << std::endl;
+    }
+    catch (std::exception& e) {
+    }
+  }
 }
 
 int main() {
@@ -36,7 +42,8 @@ int main() {
 
   if (opcion == 1) {
     Cliente();
-  } else {
+  }
+  else {
     Servidor();
   }
   return 0;

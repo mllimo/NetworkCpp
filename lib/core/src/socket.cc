@@ -44,8 +44,14 @@ size_t Socket::Receive(Buffer<>& buffer, SocketAddr& addr) {
   sockaddr_in ip = addr.CSockaddr();
   socklen_t len = sizeof(ip);
   // No creo que funcione
-  ssize_t n = recvfrom(fd_, &buffer, sizeof(buffer), 0, (sockaddr*)&ip, &len);
-  if (n < 0) throw std::runtime_error("recvfrom error");
+  ssize_t n = recvfrom(fd_, &buffer, sizeof(buffer), MSG_DONTWAIT, (sockaddr*)&ip, &len);
+  
+  if (n < 0)
+    if (errno == EAGAIN)
+      throw std::runtime_error("timeout");
+    else
+      throw std::runtime_error("recvfrom error");
+
   addr.CSockAddr(ip);
   return n;
 }
