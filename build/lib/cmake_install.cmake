@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/c/Users/argui/Documents/c/cliente-servidor/lib
+# Install script for directory: /mnt/c/Users/argui/Documents/c++/cliente-servidor/lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/mnt/c/Users/argui/Documents/c/cliente-servidor/build/lib/core/cmake_install.cmake")
+  include("/mnt/c/Users/argui/Documents/c++/cliente-servidor/build/lib/core/cmake_install.cmake")
 
 endif()
 

@@ -1,7 +1,7 @@
 lib/core/CMakeFiles/core.dir/src/socket_addr.cc.o: \
- /mnt/c/Users/argui/Documents/c/cliente-servidor/lib/core/src/socket_addr.cc \
+ /mnt/c/Users/argui/Documents/c++/cliente-servidor/lib/core/src/socket_addr.cc \
  /usr/include/stdc-predef.h \
- /mnt/c/Users/argui/Documents/c/cliente-servidor/lib/core/include/core/socket_addr.h \
+ /mnt/c/Users/argui/Documents/c++/cliente-servidor/lib/core/include/core/socket_addr.h \
  /usr/include/c++/9/string \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \

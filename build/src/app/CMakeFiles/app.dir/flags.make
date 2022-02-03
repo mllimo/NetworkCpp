@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/mnt/c/Users/argui/Documents/c/cliente-servidor/lib/core/include
+CXX_INCLUDES = -I/mnt/c/Users/argui/Documents/c++/cliente-servidor/lib/core/include
 
 CXX_FLAGS = 
 

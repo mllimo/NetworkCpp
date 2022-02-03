@@ -53,10 +53,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/argui/Documents/c/cliente-servidor
+CMAKE_SOURCE_DIR = /mnt/c/Users/argui/Documents/c++/cliente-servidor
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/argui/Documents/c/cliente-servidor/build
+CMAKE_BINARY_DIR = /mnt/c/Users/argui/Documents/c++/cliente-servidor/build
 
 # Include any dependencies generated for this target.
 include lib/core/CMakeFiles/core.dir/depend.make
@@ -72,30 +72,30 @@ include lib/core/CMakeFiles/core.dir/flags.make
 lib/core/CMakeFiles/core.dir/src/socket_addr.cc.o: lib/core/CMakeFiles/core.dir/flags.make
 lib/core/CMakeFiles/core.dir/src/socket_addr.cc.o: ../lib/core/src/socket_addr.cc
 lib/core/CMakeFiles/core.dir/src/socket_addr.cc.o: lib/core/CMakeFiles/core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/argui/Documents/c/cliente-servidor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lib/core/CMakeFiles/core.dir/src/socket_addr.cc.o"
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build/lib/core && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/core/CMakeFiles/core.dir/src/socket_addr.cc.o -MF CMakeFiles/core.dir/src/socket_addr.cc.o.d -o CMakeFiles/core.dir/src/socket_addr.cc.o -c /mnt/c/Users/argui/Documents/c/cliente-servidor/lib/core/src/socket_addr.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/argui/Documents/c++/cliente-servidor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lib/core/CMakeFiles/core.dir/src/socket_addr.cc.o"
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build/lib/core && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/core/CMakeFiles/core.dir/src/socket_addr.cc.o -MF CMakeFiles/core.dir/src/socket_addr.cc.o.d -o CMakeFiles/core.dir/src/socket_addr.cc.o -c /mnt/c/Users/argui/Documents/c++/cliente-servidor/lib/core/src/socket_addr.cc
 
 lib/core/CMakeFiles/core.dir/src/socket_addr.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/src/socket_addr.cc.i"
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build/lib/core && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/argui/Documents/c/cliente-servidor/lib/core/src/socket_addr.cc > CMakeFiles/core.dir/src/socket_addr.cc.i
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build/lib/core && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/argui/Documents/c++/cliente-servidor/lib/core/src/socket_addr.cc > CMakeFiles/core.dir/src/socket_addr.cc.i
 
 lib/core/CMakeFiles/core.dir/src/socket_addr.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/src/socket_addr.cc.s"
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build/lib/core && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/argui/Documents/c/cliente-servidor/lib/core/src/socket_addr.cc -o CMakeFiles/core.dir/src/socket_addr.cc.s
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build/lib/core && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/argui/Documents/c++/cliente-servidor/lib/core/src/socket_addr.cc -o CMakeFiles/core.dir/src/socket_addr.cc.s
 
 lib/core/CMakeFiles/core.dir/src/socket.cc.o: lib/core/CMakeFiles/core.dir/flags.make
 lib/core/CMakeFiles/core.dir/src/socket.cc.o: ../lib/core/src/socket.cc
 lib/core/CMakeFiles/core.dir/src/socket.cc.o: lib/core/CMakeFiles/core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/argui/Documents/c/cliente-servidor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object lib/core/CMakeFiles/core.dir/src/socket.cc.o"
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build/lib/core && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/core/CMakeFiles/core.dir/src/socket.cc.o -MF CMakeFiles/core.dir/src/socket.cc.o.d -o CMakeFiles/core.dir/src/socket.cc.o -c /mnt/c/Users/argui/Documents/c/cliente-servidor/lib/core/src/socket.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/argui/Documents/c++/cliente-servidor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object lib/core/CMakeFiles/core.dir/src/socket.cc.o"
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build/lib/core && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/core/CMakeFiles/core.dir/src/socket.cc.o -MF CMakeFiles/core.dir/src/socket.cc.o.d -o CMakeFiles/core.dir/src/socket.cc.o -c /mnt/c/Users/argui/Documents/c++/cliente-servidor/lib/core/src/socket.cc
 
 lib/core/CMakeFiles/core.dir/src/socket.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/src/socket.cc.i"
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build/lib/core && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/argui/Documents/c/cliente-servidor/lib/core/src/socket.cc > CMakeFiles/core.dir/src/socket.cc.i
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build/lib/core && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/argui/Documents/c++/cliente-servidor/lib/core/src/socket.cc > CMakeFiles/core.dir/src/socket.cc.i
 
 lib/core/CMakeFiles/core.dir/src/socket.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/src/socket.cc.s"
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build/lib/core && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/argui/Documents/c/cliente-servidor/lib/core/src/socket.cc -o CMakeFiles/core.dir/src/socket.cc.s
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build/lib/core && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/argui/Documents/c++/cliente-servidor/lib/core/src/socket.cc -o CMakeFiles/core.dir/src/socket.cc.s
 
 # Object files for target core
 core_OBJECTS = \
@@ -109,19 +109,19 @@ lib/core/libcore.a: lib/core/CMakeFiles/core.dir/src/socket_addr.cc.o
 lib/core/libcore.a: lib/core/CMakeFiles/core.dir/src/socket.cc.o
 lib/core/libcore.a: lib/core/CMakeFiles/core.dir/build.make
 lib/core/libcore.a: lib/core/CMakeFiles/core.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/argui/Documents/c/cliente-servidor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libcore.a"
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build/lib/core && $(CMAKE_COMMAND) -P CMakeFiles/core.dir/cmake_clean_target.cmake
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build/lib/core && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/core.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/argui/Documents/c++/cliente-servidor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libcore.a"
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build/lib/core && $(CMAKE_COMMAND) -P CMakeFiles/core.dir/cmake_clean_target.cmake
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build/lib/core && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/core.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 lib/core/CMakeFiles/core.dir/build: lib/core/libcore.a
 .PHONY : lib/core/CMakeFiles/core.dir/build
 
 lib/core/CMakeFiles/core.dir/clean:
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build/lib/core && $(CMAKE_COMMAND) -P CMakeFiles/core.dir/cmake_clean.cmake
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build/lib/core && $(CMAKE_COMMAND) -P CMakeFiles/core.dir/cmake_clean.cmake
 .PHONY : lib/core/CMakeFiles/core.dir/clean
 
 lib/core/CMakeFiles/core.dir/depend:
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/argui/Documents/c/cliente-servidor /mnt/c/Users/argui/Documents/c/cliente-servidor/lib/core /mnt/c/Users/argui/Documents/c/cliente-servidor/build /mnt/c/Users/argui/Documents/c/cliente-servidor/build/lib/core /mnt/c/Users/argui/Documents/c/cliente-servidor/build/lib/core/CMakeFiles/core.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/argui/Documents/c++/cliente-servidor /mnt/c/Users/argui/Documents/c++/cliente-servidor/lib/core /mnt/c/Users/argui/Documents/c++/cliente-servidor/build /mnt/c/Users/argui/Documents/c++/cliente-servidor/build/lib/core /mnt/c/Users/argui/Documents/c++/cliente-servidor/build/lib/core/CMakeFiles/core.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib/core/CMakeFiles/core.dir/depend
 

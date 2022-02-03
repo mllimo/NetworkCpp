@@ -3,6 +3,7 @@
 #include <exception>
 
 #include <sys/socket.h>
+#include <sys/time.h>
 #include <unistd.h>
 
 #include <core/socket_addr.h>
@@ -15,6 +16,7 @@ public:
   ~Socket();
 
   void Bind(const SocketAddr& addr);
+  void SetTimeout(int seconds, int microseconds = 0);
 
   size_t Send(const Buffer<>& buffer, const SocketAddr& addr);
   size_t Receive(Buffer<>& buffer, SocketAddr& addr);

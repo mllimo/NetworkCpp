@@ -22,11 +22,23 @@ public:
 
   Buffer& operator=(const Buffer& rhs);
   Buffer& operator=(const std::string& rhs);
-  
-  template<size_t X>
-  friend std::ostream& operator<<(std::ostream& os, const Buffer<X>& buffer);
-  template<size_t X>
-  friend std::istream& operator>>(std::istream& is, Buffer<X>& buffer);
+
+  template <size_t N>
+  friend bool operator==(const Buffer<N>& lhs, const Buffer<N>& rhs);
+
+  template <size_t N>
+  friend bool operator==(const Buffer<N>& lhs, const std::string& rhs);
+
+  template <size_t N>
+  friend bool operator!=(const Buffer<N>& lhs, const Buffer<N>& rhs);
+
+  template <size_t N>
+  friend bool operator!=(const Buffer<N>& lhs, const std::string& rhs);
+
+  template<size_t N>
+  friend std::ostream& operator<<(std::ostream& os, const Buffer<N>& buffer);
+  template<size_t N>
+  friend std::istream& operator>>(std::istream& is, Buffer<N>& buffer);
 
 private:
   std::array<char, SIZE> data_;
@@ -76,12 +88,14 @@ size_t Buffer<SIZE>::Size() const {
 template <size_t SIZE>
 Buffer<SIZE>& Buffer<SIZE>::operator=(const Buffer<SIZE>& rhs) {
   data_ = rhs.data_;
+  last_index_ = rhs.last_index_;
   return *this;
 }
 
 template <size_t SIZE>
 Buffer<SIZE>& Buffer<SIZE>::operator=(const std::string& rhs) {
   strcpy(data_.data(), rhs.c_str());
+  last_index_ = rhs.size();
   return *this;
 }
 
@@ -95,6 +109,26 @@ template <size_t SIZE>
 std::istream& operator>>(std::istream& is, Buffer<SIZE>& buffer) {
   std::string data;
   is >> data;
-  buffer.Append(data);
+  buffer = data;
   return is;
+}
+
+template <size_t N>
+bool operator==(const Buffer<N>& lhs, const Buffer<N>& rhs) {
+  return strcpy(lhs.data_.data(), rhs.data_.data()) == 0;
+}
+
+template <size_t N>
+bool operator!=(const Buffer<N>& lhs, const Buffer<N>& rhs) {
+  return !(lhs == rhs);
+}
+
+template <size_t N>
+bool operator==(const Buffer<N>& lhs, const std::string& rhs) {
+  return strcmp(lhs.data_.data(), rhs.c_str()) == 0;
+}
+
+template <size_t N>
+bool operator!=(const Buffer<N>& lhs, const std::string& rhs) {
+  return !(lhs == rhs);
 }

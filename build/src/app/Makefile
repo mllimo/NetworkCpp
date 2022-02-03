@@ -57,10 +57,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/argui/Documents/c/cliente-servidor
+CMAKE_SOURCE_DIR = /mnt/c/Users/argui/Documents/c++/cliente-servidor
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/argui/Documents/c/cliente-servidor/build
+CMAKE_BINARY_DIR = /mnt/c/Users/argui/Documents/c++/cliente-servidor/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/argui/Documents/c/cliente-servidor/build/CMakeFiles /mnt/c/Users/argui/Documents/c/cliente-servidor/build/src/app//CMakeFiles/progress.marks
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/app/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/argui/Documents/c/cliente-servidor/build/CMakeFiles 0
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/argui/Documents/c++/cliente-servidor/build/CMakeFiles /mnt/c/Users/argui/Documents/c++/cliente-servidor/build/src/app//CMakeFiles/progress.marks
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/app/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/argui/Documents/c++/cliente-servidor/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/app/clean
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/app/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/app/preinstall
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/app/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/app/preinstall
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/app/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/app/CMakeFiles/app.dir/rule:
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/app/CMakeFiles/app.dir/rule
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/app/CMakeFiles/app.dir/rule
 .PHONY : src/app/CMakeFiles/app.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ app: src/app/CMakeFiles/app.dir/rule
 
 # fast build rule for target.
 app/fast:
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f src/app/CMakeFiles/app.dir/build.make src/app/CMakeFiles/app.dir/build
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f src/app/CMakeFiles/app.dir/build.make src/app/CMakeFiles/app.dir/build
 .PHONY : app/fast
 
 src/app.o: src/app.cc.o
@@ -135,7 +135,7 @@ src/app.o: src/app.cc.o
 
 # target to build an object file
 src/app.cc.o:
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f src/app/CMakeFiles/app.dir/build.make src/app/CMakeFiles/app.dir/src/app.cc.o
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f src/app/CMakeFiles/app.dir/build.make src/app/CMakeFiles/app.dir/src/app.cc.o
 .PHONY : src/app.cc.o
 
 src/app.i: src/app.cc.i
@@ -143,7 +143,7 @@ src/app.i: src/app.cc.i
 
 # target to preprocess a source file
 src/app.cc.i:
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f src/app/CMakeFiles/app.dir/build.make src/app/CMakeFiles/app.dir/src/app.cc.i
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f src/app/CMakeFiles/app.dir/build.make src/app/CMakeFiles/app.dir/src/app.cc.i
 .PHONY : src/app.cc.i
 
 src/app.s: src/app.cc.s
@@ -151,7 +151,7 @@ src/app.s: src/app.cc.s
 
 # target to generate assembly for a file
 src/app.cc.s:
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f src/app/CMakeFiles/app.dir/build.make src/app/CMakeFiles/app.dir/src/app.cc.s
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f src/app/CMakeFiles/app.dir/build.make src/app/CMakeFiles/app.dir/src/app.cc.s
 .PHONY : src/app.cc.s
 
 # Help Target
@@ -177,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

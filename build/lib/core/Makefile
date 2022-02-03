@@ -57,10 +57,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/argui/Documents/c/cliente-servidor
+CMAKE_SOURCE_DIR = /mnt/c/Users/argui/Documents/c++/cliente-servidor
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/argui/Documents/c/cliente-servidor/build
+CMAKE_BINARY_DIR = /mnt/c/Users/argui/Documents/c++/cliente-servidor/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/argui/Documents/c/cliente-servidor/build/CMakeFiles /mnt/c/Users/argui/Documents/c/cliente-servidor/build/lib/core//CMakeFiles/progress.marks
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/core/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/argui/Documents/c/cliente-servidor/build/CMakeFiles 0
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/argui/Documents/c++/cliente-servidor/build/CMakeFiles /mnt/c/Users/argui/Documents/c++/cliente-servidor/build/lib/core//CMakeFiles/progress.marks
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/core/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/argui/Documents/c++/cliente-servidor/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/core/clean
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/core/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/core/preinstall
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/core/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/core/preinstall
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/core/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 lib/core/CMakeFiles/core.dir/rule:
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/core/CMakeFiles/core.dir/rule
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/core/CMakeFiles/core.dir/rule
 .PHONY : lib/core/CMakeFiles/core.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ core: lib/core/CMakeFiles/core.dir/rule
 
 # fast build rule for target.
 core/fast:
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f lib/core/CMakeFiles/core.dir/build.make lib/core/CMakeFiles/core.dir/build
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f lib/core/CMakeFiles/core.dir/build.make lib/core/CMakeFiles/core.dir/build
 .PHONY : core/fast
 
 src/socket.o: src/socket.cc.o
@@ -135,7 +135,7 @@ src/socket.o: src/socket.cc.o
 
 # target to build an object file
 src/socket.cc.o:
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f lib/core/CMakeFiles/core.dir/build.make lib/core/CMakeFiles/core.dir/src/socket.cc.o
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f lib/core/CMakeFiles/core.dir/build.make lib/core/CMakeFiles/core.dir/src/socket.cc.o
 .PHONY : src/socket.cc.o
 
 src/socket.i: src/socket.cc.i
@@ -143,7 +143,7 @@ src/socket.i: src/socket.cc.i
 
 # target to preprocess a source file
 src/socket.cc.i:
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f lib/core/CMakeFiles/core.dir/build.make lib/core/CMakeFiles/core.dir/src/socket.cc.i
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f lib/core/CMakeFiles/core.dir/build.make lib/core/CMakeFiles/core.dir/src/socket.cc.i
 .PHONY : src/socket.cc.i
 
 src/socket.s: src/socket.cc.s
@@ -151,7 +151,7 @@ src/socket.s: src/socket.cc.s
 
 # target to generate assembly for a file
 src/socket.cc.s:
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f lib/core/CMakeFiles/core.dir/build.make lib/core/CMakeFiles/core.dir/src/socket.cc.s
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f lib/core/CMakeFiles/core.dir/build.make lib/core/CMakeFiles/core.dir/src/socket.cc.s
 .PHONY : src/socket.cc.s
 
 src/socket_addr.o: src/socket_addr.cc.o
@@ -159,7 +159,7 @@ src/socket_addr.o: src/socket_addr.cc.o
 
 # target to build an object file
 src/socket_addr.cc.o:
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f lib/core/CMakeFiles/core.dir/build.make lib/core/CMakeFiles/core.dir/src/socket_addr.cc.o
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f lib/core/CMakeFiles/core.dir/build.make lib/core/CMakeFiles/core.dir/src/socket_addr.cc.o
 .PHONY : src/socket_addr.cc.o
 
 src/socket_addr.i: src/socket_addr.cc.i
@@ -167,7 +167,7 @@ src/socket_addr.i: src/socket_addr.cc.i
 
 # target to preprocess a source file
 src/socket_addr.cc.i:
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f lib/core/CMakeFiles/core.dir/build.make lib/core/CMakeFiles/core.dir/src/socket_addr.cc.i
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f lib/core/CMakeFiles/core.dir/build.make lib/core/CMakeFiles/core.dir/src/socket_addr.cc.i
 .PHONY : src/socket_addr.cc.i
 
 src/socket_addr.s: src/socket_addr.cc.s
@@ -175,7 +175,7 @@ src/socket_addr.s: src/socket_addr.cc.s
 
 # target to generate assembly for a file
 src/socket_addr.cc.s:
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f lib/core/CMakeFiles/core.dir/build.make lib/core/CMakeFiles/core.dir/src/socket_addr.cc.s
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build && $(MAKE) $(MAKESILENT) -f lib/core/CMakeFiles/core.dir/build.make lib/core/CMakeFiles/core.dir/src/socket_addr.cc.s
 .PHONY : src/socket_addr.cc.s
 
 # Help Target
@@ -204,6 +204,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /mnt/c/Users/argui/Documents/c/cliente-servidor/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /mnt/c/Users/argui/Documents/c++/cliente-servidor/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

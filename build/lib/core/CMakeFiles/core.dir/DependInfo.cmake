@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/c/Users/argui/Documents/c/cliente-servidor/lib/core/src/socket.cc" "lib/core/CMakeFiles/core.dir/src/socket.cc.o" "gcc" "lib/core/CMakeFiles/core.dir/src/socket.cc.o.d"
-  "/mnt/c/Users/argui/Documents/c/cliente-servidor/lib/core/src/socket_addr.cc" "lib/core/CMakeFiles/core.dir/src/socket_addr.cc.o" "gcc" "lib/core/CMakeFiles/core.dir/src/socket_addr.cc.o.d"
+  "/mnt/c/Users/argui/Documents/c++/cliente-servidor/lib/core/src/socket.cc" "lib/core/CMakeFiles/core.dir/src/socket.cc.o" "gcc" "lib/core/CMakeFiles/core.dir/src/socket.cc.o.d"
+  "/mnt/c/Users/argui/Documents/c++/cliente-servidor/lib/core/src/socket_addr.cc" "lib/core/CMakeFiles/core.dir/src/socket_addr.cc.o" "gcc" "lib/core/CMakeFiles/core.dir/src/socket_addr.cc.o.d"
   )
 
 # Targets to which this target links.

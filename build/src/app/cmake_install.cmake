@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/c/Users/argui/Documents/c/cliente-servidor/src/app
+# Install script for directory: /mnt/c/Users/argui/Documents/c++/cliente-servidor/src/app
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

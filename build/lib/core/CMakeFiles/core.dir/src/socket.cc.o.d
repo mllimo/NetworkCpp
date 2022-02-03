@@ -1,7 +1,7 @@
 lib/core/CMakeFiles/core.dir/src/socket.cc.o: \
- /mnt/c/Users/argui/Documents/c/cliente-servidor/lib/core/src/socket.cc \
+ /mnt/c/Users/argui/Documents/c++/cliente-servidor/lib/core/src/socket.cc \
  /usr/include/stdc-predef.h \
- /mnt/c/Users/argui/Documents/c/cliente-servidor/lib/core/include/core/socket.h \
+ /mnt/c/Users/argui/Documents/c++/cliente-servidor/lib/core/include/core/socket.h \
  /usr/include/c++/9/exception \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
@@ -61,13 +61,14 @@ lib/core/CMakeFiles/core.dir/src/socket.cc.o: \
  /usr/include/x86_64-linux-gnu/asm/sockios.h \
  /usr/include/asm-generic/sockios.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
- /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /usr/include/x86_64-linux-gnu/sys/time.h /usr/include/unistd.h \
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
- /mnt/c/Users/argui/Documents/c/cliente-servidor/lib/core/include/core/socket_addr.h \
+ /mnt/c/Users/argui/Documents/c++/cliente-servidor/lib/core/include/core/socket_addr.h \
  /usr/include/c++/9/string /usr/include/c++/9/bits/stringfwd.h \
  /usr/include/c++/9/bits/memoryfwd.h \
  /usr/include/c++/9/bits/char_traits.h \
@@ -167,7 +168,7 @@ lib/core/CMakeFiles/core.dir/src/socket.cc.o: \
  /usr/include/c++/9/bits/ostream.tcc /usr/include/c++/9/istream \
  /usr/include/c++/9/bits/istream.tcc /usr/include/netinet/in.h \
  /usr/include/x86_64-linux-gnu/bits/in.h /usr/include/arpa/inet.h \
- /mnt/c/Users/argui/Documents/c/cliente-servidor/lib/core/include/core/buffer.h \
+ /mnt/c/Users/argui/Documents/c++/cliente-servidor/lib/core/include/core/buffer.h \
  /usr/include/c++/9/cstring /usr/include/string.h /usr/include/strings.h \
  /usr/include/c++/9/array /usr/include/c++/9/utility \
  /usr/include/c++/9/bits/stl_relops.h
