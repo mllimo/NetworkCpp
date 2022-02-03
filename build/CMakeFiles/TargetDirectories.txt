@@ -1,0 +1,12 @@
+/mnt/c/Users/argui/Documents/c/cliente-servidor/build/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/argui/Documents/c/cliente-servidor/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/argui/Documents/c/cliente-servidor/build/lib/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/argui/Documents/c/cliente-servidor/build/lib/CMakeFiles/edit_cache.dir
+/mnt/c/Users/argui/Documents/c/cliente-servidor/build/lib/core/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/argui/Documents/c/cliente-servidor/build/lib/core/CMakeFiles/edit_cache.dir
+/mnt/c/Users/argui/Documents/c/cliente-servidor/build/lib/core/CMakeFiles/core.dir
+/mnt/c/Users/argui/Documents/c/cliente-servidor/build/src/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/argui/Documents/c/cliente-servidor/build/src/CMakeFiles/edit_cache.dir
+/mnt/c/Users/argui/Documents/c/cliente-servidor/build/src/app/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/argui/Documents/c/cliente-servidor/build/src/app/CMakeFiles/edit_cache.dir
+/mnt/c/Users/argui/Documents/c/cliente-servidor/build/src/app/CMakeFiles/app.dir
