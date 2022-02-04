@@ -54,3 +54,13 @@ std::ostream& operator<<(std::ostream& os, const SocketAddr& addr) {
   os << "Ip: " << addr.Ip() << " Port: " << addr.Port() << " Domain: " << addr.Domain();
   return os;
 }
+
+bool operator<(const SocketAddr& lhs, const SocketAddr& rhs) {
+  if (lhs.Ip() < rhs.Ip()) {
+    return true;
+  }
+  else if (lhs.Ip() == rhs.Ip()) {
+    return lhs.Port() < rhs.Port();
+  }
+  return false;
+}

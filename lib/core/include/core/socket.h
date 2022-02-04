@@ -18,8 +18,12 @@ public:
   void Bind(const SocketAddr& addr);
   void SetTimeout(int seconds, int microseconds = 0);
 
+  void Connect(const SocketAddr& addr);
+
   size_t Send(const Buffer<>& buffer, const SocketAddr& addr);
+  size_t Send(const Buffer<>& buffer);
   size_t Receive(Buffer<>& buffer, SocketAddr& addr);
+  size_t Receive(Buffer<>& buffer);
 
 private:
   int fd_;

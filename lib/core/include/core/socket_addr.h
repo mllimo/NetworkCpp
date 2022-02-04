@@ -23,6 +23,7 @@ public:
   void Port(int port);
 
   friend std::ostream& operator<<(std::ostream& os, const SocketAddr& addr);
+  friend bool operator<(const SocketAddr& lhs, const SocketAddr& rhs);
 
 private:
   int family_;
