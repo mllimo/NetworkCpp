@@ -11,6 +11,7 @@ class SocketAddr {
 public:
   SocketAddr(const std::string& ip = "", int port = 0, int domain = AF_INET);
   SocketAddr(const struct sockaddr_in& addr);
+  SocketAddr(const SocketAddr& addr);
 
   const std::string& Ip() const;
   sockaddr_in CSockaddr() const;

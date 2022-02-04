@@ -1,6 +1,7 @@
 #include <string>
 
 #include <signal.h>
+#include <errno.h>
 
 #include <core/socket.h>
 
@@ -17,7 +18,7 @@ void SignalHandler(int signum) {
 }
 
 void Cliente() {
-  Client client({"127.0.0.1", 8080, AF_INET}, {"127.0.0.0", 3030, AF_INET});
+  Client client({ "127.0.0.1", 8080, AF_INET }, { "127.0.0.0", 3030, AF_INET });
   client.Connect();
   Buffer<> buffer;
   std::string msg;
@@ -31,7 +32,7 @@ void Cliente() {
 }
 
 void Servidor() {
-  Server server({"127.0.0.0", 3030, AF_INET});
+  Server server({ "127.0.0.0", 3030, AF_INET });
   while (!end) {
     server.Receive();
   }
@@ -45,11 +46,17 @@ int main() {
   std::cout << "Opcion: ";
   std::cin >> opcion;
 
-  if (opcion == 1) {
-    Cliente();
+  try {
+    if (opcion == 1) {
+      Cliente();
+    }
+    else {
+      Servidor();
+    }
+  } catch (const std::exception& e) {
+    std::cerr << e.what() << std::endl;
+    std::cerr << "errno: " << errno << std::endl;
   }
-  else {
-    Servidor();
-  }
-  return 0;
+  
+    return 0;
 }

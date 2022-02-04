@@ -12,6 +12,12 @@ SocketAddr::SocketAddr(const sockaddr_in& addr) {
   ip_ = inet_ntoa(addr.sin_addr);
 }
 
+SocketAddr::SocketAddr(const SocketAddr& addr) {
+  family_ = addr.family_;
+  port_ = addr.port_;
+  ip_ = addr.ip_;
+}
+
 const std::string& SocketAddr::Ip() const {
   return ip_;
 }
