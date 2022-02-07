@@ -34,13 +34,13 @@ void Socket::SetTimeout(int seconds, int microseconds) {
 
 size_t Socket::Send(const Buffer<>& buffer, const SocketAddr& addr) {
   sockaddr_in ip = addr.CSockaddr();
-  size_t n = sendto(fd_, buffer.Data(), sizeof(buffer), 0, (sockaddr*)&ip, sizeof(ip));
+  size_t n = sendto(fd_, &buffer, sizeof(buffer), 0, (sockaddr*)&ip, sizeof(ip));
   if (n < 0) throw std::runtime_error("sendto error");
   return n;
 }
 
 size_t Socket::Send(const Buffer<>& buffer) {
-  size_t n = send(fd_, buffer.Data(), sizeof(buffer), 0);
+  size_t n = send(fd_, &buffer, sizeof(buffer), 0);
   if (n < 0) throw std::runtime_error("send error");
   return n;
 }

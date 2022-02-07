@@ -12,6 +12,7 @@
 
 class Socket {
 public:
+  Socket(const Socket&) = delete;
   Socket(int domain, int type, int protocol);
   ~Socket();
 
@@ -24,6 +25,8 @@ public:
   size_t Send(const Buffer<>& buffer);
   size_t Receive(Buffer<>& buffer, SocketAddr& addr);
   size_t Receive(Buffer<>& buffer);
+
+  Socket& operator=(const Socket&) = delete;
 
 private:
   int fd_;

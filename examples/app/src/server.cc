@@ -12,8 +12,7 @@ void Server::Receive() {
   SocketAddr addr;
   size_t n = socket_.Receive(buffer, addr);
   if (n == 0) return;
-  std::cout << "Message from: " << addr << std::endl;
-  buffer_propagate = addr.Ip() + ": " + buffer.Data();
+  buffer_propagate = buffer.Data();
   clients_.insert(addr);
   Propagate(buffer_propagate);
 }
