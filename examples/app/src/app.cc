@@ -21,7 +21,7 @@ void SignalHandler(int signum) {
 
 void Cliente() {
   SocketAddr host = { "127.0.0.12", 3030, AF_INET };
-  Client client({ "127.0.0.11", 8080, AF_INET }, host);
+  Client client({ "127.0.0.11", 0, AF_INET }, host);
   Buffer<> buffer;
   std::string msg;
 

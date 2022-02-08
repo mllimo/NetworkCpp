@@ -23,52 +23,11 @@ void Socket::Bind(const SocketAddr& addr) {
   }
 }
 
-void Socket::SetTimeout(int seconds, int microseconds) {
+void Socket::SetTimeout(int microseconds) {
   timeval tv;
-  tv.tv_sec = seconds;
+  tv.tv_sec = 0;
   tv.tv_usec = microseconds;
   if (setsockopt(fd_, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv)) < 0) {
     throw std::runtime_error("setsockopt error");
-  }
-}
-
-size_t Socket::Send(const Buffer<>& buffer, const SocketAddr& addr) {
-  sockaddr_in ip = addr.CSockaddr();
-  size_t n = sendto(fd_, &buffer, sizeof(buffer), 0, (sockaddr*)&ip, sizeof(ip));
-  if (n < 0) throw std::runtime_error("sendto error");
-  return n;
-}
-
-size_t Socket::Send(const Buffer<>& buffer) {
-  size_t n = send(fd_, &buffer, sizeof(buffer), 0);
-  if (n < 0) throw std::runtime_error("send error");
-  return n;
-}
-
-size_t Socket::Receive(Buffer<>& buffer, SocketAddr& addr) {
-  sockaddr_in ip = addr.CSockaddr();
-  socklen_t len = sizeof(ip);
-  ssize_t n = recvfrom(fd_, &buffer, sizeof(buffer), MSG_DONTWAIT, (sockaddr*)&ip, &len);
-
-  if (n < 0)
-    if (errno == EAGAIN) return 0;
-    else throw std::runtime_error("recvfrom error");
-
-  addr.CSockAddr(ip);
-  return n;
-}
-
-size_t Socket::Receive(Buffer<>& buffer) {
-  ssize_t n = recv(fd_, &buffer, sizeof(buffer), MSG_DONTWAIT);
-  if (n < 0)
-    if (errno == EAGAIN)return 0;
-    else throw std::runtime_error("recvfrom error");
-  return n;
-}
-
-void Socket::Connect(const SocketAddr& addr) {
-  sockaddr_in ip = addr.CSockaddr();
-  if (connect(fd_, (sockaddr*)&ip, sizeof(ip)) < 0) {
-    throw std::runtime_error("connect error");
   }
 }
