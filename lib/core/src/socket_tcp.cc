@@ -1,7 +1,6 @@
 #include <core/socket_tcp.h>
 
 SocketTcp::SocketTcp() : Socket(AF_INET, SOCK_STREAM, 0) {
-
 }
 
 size_t SocketTcp::Send(const Buffer<>& buffer) {
