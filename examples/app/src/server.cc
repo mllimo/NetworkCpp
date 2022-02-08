@@ -1,6 +1,7 @@
 #include "server.h"
 
-Server::Server(const SocketAddr& addr) : socket_(AF_INET, SOCK_DGRAM, 0) {
+Server::Server(const SocketAddr& addr) : socket_() {
+  socket_.Open();
   socket_.Bind(addr);
 }
 

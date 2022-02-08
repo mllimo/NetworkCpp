@@ -1,9 +1,9 @@
 #pragma once
 
-#include <core/socket.h>
-#include <core/socket_addr.h>
-
 #include <set>
+
+#include <core/socket_udp.h>
+#include <core/socket_addr.h>
 
 class Server {
 public:
@@ -13,7 +13,7 @@ public:
   void Receive();
 
 private:
-  Socket socket_;
+  SocketUdp socket_;
   std::set<SocketAddr> clients_;
 
   void Propagate(const Buffer<>& buffer);

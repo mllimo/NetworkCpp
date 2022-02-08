@@ -12,7 +12,7 @@ size_t SocketUdp::Send(const Buffer<>& buffer, const SocketAddr& addr) {
 size_t SocketUdp::Receive(Buffer<>& buffer, SocketAddr& addr) {
   sockaddr_in ip = addr.CSockaddr();
   socklen_t len = sizeof(ip);
-  ssize_t n = recvfrom(fd_, &buffer, sizeof(buffer), MSG_DONTWAIT, (sockaddr*)&ip, &len);
+  ssize_t n = recvfrom(fd_, &buffer, sizeof(buffer), blocking_mode_, (sockaddr*)&ip, &len);
 
   if (n < 0)
     if (errno == EAGAIN) return 0;

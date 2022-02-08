@@ -14,7 +14,6 @@ enum Type {
   TCP, UDP
 };
   
-
 class Socket {
 public:
 
@@ -66,6 +65,12 @@ public:
   Socket& operator=(const Socket&) = delete;
 
 protected:
-  int fd_;
   SocketAddr addr_;
+  bool is_blocking_;
+  int blocking_mode_;
+  int protocol_;
+  int domain_;
+  int type_;
+  int fd_;
+
 };

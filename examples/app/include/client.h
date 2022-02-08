@@ -1,9 +1,9 @@
 #pragma once
 
-#include <core/socket.h>
-#include <core/socket_addr.h>
-
 #include <iostream>
+
+#include <core/socket_addr.h>
+#include <core/socket_udp.h>
 
 class Client {
 public:
@@ -12,6 +12,6 @@ public:
   Buffer<> Receive();
 
 private:
-  Socket socket_;
+  SocketUdp socket_;
   SocketAddr host_;
 };

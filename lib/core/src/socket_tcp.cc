@@ -11,7 +11,7 @@ size_t SocketTcp::Send(const Buffer<>& buffer) {
 }
 
 size_t SocketTcp::Receive(Buffer<>& buffer) {
-  ssize_t n = recv(fd_, &buffer, sizeof(buffer), MSG_DONTWAIT);
+  ssize_t n = recv(fd_, &buffer, sizeof(buffer), blocking_mode_);
   if (n < 0)
     if (errno == EAGAIN)return 0;
     else throw std::runtime_error("recvfrom error");
@@ -20,6 +20,10 @@ size_t SocketTcp::Receive(Buffer<>& buffer) {
 
 Type SocketTcp::GetType() const {
   return Type::TCP;
+}
+
+void SocketTcp::Disconect() {
+  Close();
 }
 
 void SocketTcp::Connect(const SocketAddr& addr) {

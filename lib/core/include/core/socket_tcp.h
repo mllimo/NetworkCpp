@@ -11,6 +11,7 @@ class SocketTcp : public Socket {
     Type GetType() const override;
 
     void Connect(const SocketAddr& addr);
+    void Disconect();
 
     SocketTcp(const SocketTcp&) = delete;
     SocketTcp& operator=(const SocketTcp&) = delete;
