@@ -9,9 +9,19 @@ Socket::Socket(int domain, int type, int protocol) {
   protocol_ = protocol;
 }
 
+Socket::Socket(Socket&& socket) {
+  fd_ = socket.fd_;
+  is_blocking_ = socket.is_blocking_;
+  blocking_mode_ = socket.blocking_mode_;
+  domain_ = socket.domain_;
+  type_ = socket.type_;
+  protocol_ = socket.protocol_;
+  socket.fd_ = -1;
+}
+
 Socket::~Socket() {
   try {
-    Close();
+    if (fd_ != -1) Close();
   }
   catch (std::exception& e) {
     std::cerr << "Socket::~Socket() - " << e.what() << std::endl;
@@ -52,4 +62,15 @@ void Socket::Close() {
 void Socket::Open() {
   fd_ = socket(domain_, type_, protocol_);
   if (fd_ < 0) throw std::runtime_error("socket error");
+}
+
+void Socket::Create(int fd, const SocketAddr& addr) {
+  if (fd < 0) throw std::runtime_error("socket create fd error");
+  if (fd_ != -1) throw std::runtime_error("socket fd already set");
+  fd_ = fd;
+  addr_ = addr;
+}
+
+bool operator<(const Socket& lhs, const Socket& rhs) {
+  return lhs.fd_ < rhs.fd_;
 }

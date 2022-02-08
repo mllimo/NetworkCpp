@@ -2,14 +2,16 @@
 
 SocketUdp::SocketUdp() : Socket(AF_INET, SOCK_DGRAM, 0) {}
 
-size_t SocketUdp::Send(const Buffer<>& buffer, const SocketAddr& addr) {
+SocketUdp::SocketUdp(SocketUdp&& socket) : Socket(std::move(socket)) {}
+
+size_t SocketUdp::Send(const Buffer<>& buffer, const SocketAddr& addr) const {
   sockaddr_in ip = addr.CSockaddr();
   size_t n = sendto(fd_, &buffer, sizeof(buffer), 0, (sockaddr*)&ip, sizeof(ip));
   if (n < 0) throw std::runtime_error("sendto error");
   return n;
 }
 
-size_t SocketUdp::Receive(Buffer<>& buffer, SocketAddr& addr) {
+size_t SocketUdp::Receive(Buffer<>& buffer, SocketAddr& addr) const {
   sockaddr_in ip = addr.CSockaddr();
   socklen_t len = sizeof(ip);
   ssize_t n = recvfrom(fd_, &buffer, sizeof(buffer), blocking_mode_, (sockaddr*)&ip, &len);
@@ -24,4 +26,8 @@ size_t SocketUdp::Receive(Buffer<>& buffer, SocketAddr& addr) {
 
 Type SocketUdp::GetType() const {
   return Type::UDP;
+}
+
+bool operator<(const SocketUdp& lhs, const SocketUdp& rhs) {
+  return lhs.fd_ < rhs.fd_;
 }

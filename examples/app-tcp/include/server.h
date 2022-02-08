@@ -2,8 +2,7 @@
 
 #include <set>
 
-#include <core/socket_tcp.h>
-#include <core/socket_addr.h>
+#include <core/tcp_listener.h>
 
 class Server {
 public:
@@ -13,8 +12,8 @@ public:
   void Receive();
 
 private:
-  SocketTcp socket_;
-  std::set<SocketAddr> clients_;
+  TcpListener listener_;
+  std::set<SocketTcp> clients_;
 
   void Propagate(const Buffer<>& buffer);
 };

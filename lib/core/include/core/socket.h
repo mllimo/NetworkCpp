@@ -13,11 +13,12 @@
 enum Type {
   TCP, UDP
 };
-  
+
 class Socket {
 public:
-
   Socket(int domain, int type, int protocol);
+  Socket(Socket&& socket);
+  
   virtual ~Socket();
 
   /**
@@ -61,8 +62,17 @@ public:
    */
   virtual Type GetType() const = 0;
 
+  /**
+   * @brief Create a socket from the given fd and address.
+   * @param fd
+   * @param addr
+   */
+  virtual void Create(int fd, const SocketAddr& addr);
+
   Socket(const Socket&) = delete;
   Socket& operator=(const Socket&) = delete;
+
+  friend bool operator<(const Socket& lhs, const Socket& rhs);
 
 protected:
   SocketAddr addr_;
@@ -72,5 +82,4 @@ protected:
   int domain_;
   int type_;
   int fd_;
-
 };

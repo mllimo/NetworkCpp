@@ -2,17 +2,21 @@
 
 #include <core/socket.h>
 
-class SocketTcp : public Socket { 
-  public:
-    SocketTcp();
-    size_t Send(const Buffer<>& buffer);
-    size_t Receive(Buffer<>& buffer);
+class SocketTcp : public Socket {
+public:
+  SocketTcp();
+  SocketTcp(SocketTcp&& socket);
 
-    Type GetType() const override;
+  size_t Send(const Buffer<>& buffer) const;
+  size_t Receive(Buffer<>& buffer) const;
 
-    void Connect(const SocketAddr& addr);
-    void Disconect();
+  Type GetType() const override;
 
-    SocketTcp(const SocketTcp&) = delete;
-    SocketTcp& operator=(const SocketTcp&) = delete;
+  void Connect(const SocketAddr& addr);
+  void Disconect();
+
+  SocketTcp(const SocketTcp&) = delete;
+  SocketTcp& operator=(const SocketTcp&) = delete;
+
+  friend bool operator<(const SocketTcp& lhs, const SocketTcp& rhs);
 };
