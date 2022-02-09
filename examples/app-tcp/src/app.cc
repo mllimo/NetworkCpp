@@ -19,32 +19,30 @@ void SignalHandler(int signum) {
   }
 }
 
-void Cliente() {
+void ClientF() {
   SocketAddr host = { "127.0.0.12", 3030, AF_INET };
   Client client({ "127.0.0.11", 0, AF_INET }, host);
   Buffer<> buffer;
+  Buffer<> response;
   std::string msg;
 
-  std::thread receive_thread([&]() {
-    while (!end) {
-      Buffer<> response;
-      response = client.Receive();
-      if (response != "") {
-        std::cout << "Cliente recibe: " << "|" << response.Data() << "|" << std::endl;
-      }
-    }
-  });
-
   while (!end) {
+    std::cin.ignore();
     std::getline(std::cin, msg);
+
     buffer = msg;
+
     client.Send(buffer);
+
+    response = client.Receive();
+    if (response != "") {
+      std::cout << "Client receiving: " << "|" << response.Data() << "|" << std::endl;
+    }
   }
 
-  receive_thread.join();
 }
 
-void Servidor() {
+void ServerF() {
   Server server({ "127.0.0.12", 3030, AF_INET });
   while (!end) {
     server.Receive();
@@ -53,18 +51,18 @@ void Servidor() {
 
 int main() {
   signal(SIGINT, SignalHandler);
-  int opcion = 0;
-  std::cout << "1. Cliente" << std::endl;
-  std::cout << "2. Servidor" << std::endl;
-  std::cout << "Opcion: ";
-  std::cin >> opcion;
+  int Option = 0;
+  std::cout << "1. Client" << std::endl;
+  std::cout << "2. Server" << std::endl;
+  std::cout << "Option: ";
+  std::cin >> Option;
 
   try {
-    if (opcion == 1) {
-      Cliente();
+    if (Option == 1) {
+      ClientF();
     }
     else {
-      Servidor();
+      ServerF();
     }
   }
   catch (const std::exception& e) {

@@ -1,6 +1,6 @@
 #pragma once
 
-#include <set>
+#include <string>
 
 #include <core/tcp_listener.h>
 
@@ -13,7 +13,4 @@ public:
 
 private:
   TcpListener listener_;
-  std::set<SocketTcp> clients_;
-
-  void Propagate(const Buffer<>& buffer);
 };

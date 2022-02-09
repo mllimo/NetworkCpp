@@ -19,7 +19,7 @@ void SignalHandler(int signum) {
   }
 }
 
-void Cliente() {
+void Client() {
   SocketAddr host = { "127.0.0.12", 3030, AF_INET };
   Client client({ "127.0.0.11", 0, AF_INET }, host);
   Buffer<> buffer;
@@ -30,7 +30,7 @@ void Cliente() {
       Buffer<> response;
       response = client.Receive();
       if (response != "") {
-        std::cout << "Cliente recibe: " << "|" << response.Data() << "|" << std::endl;
+        std::cout << "Client receiving: " << "|" << response.Data() << "|" << std::endl;
       }
     }
   });
@@ -44,7 +44,7 @@ void Cliente() {
   receive_thread.join();
 }
 
-void Servidor() {
+void Server() {
   Server server({ "127.0.0.12", 3030, AF_INET });
   while (!end) {
     server.Receive();
@@ -53,18 +53,18 @@ void Servidor() {
 
 int main() {
   signal(SIGINT, SignalHandler);
-  int opcion = 0;
-  std::cout << "1. Cliente" << std::endl;
-  std::cout << "2. Servidor" << std::endl;
-  std::cout << "Opcion: ";
-  std::cin >> opcion;
+  int Option = 0;
+  std::cout << "1. Client" << std::endl;
+  std::cout << "2. Server" << std::endl;
+  std::cout << "Option: ";
+  std::cin >> Option;
 
   try {
-    if (opcion == 1) {
-      Cliente();
+    if (Option == 1) {
+      Client();
     }
     else {
-      Servidor();
+      Server();
     }
   }
   catch (const std::exception& e) {
